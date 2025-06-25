@@ -35,10 +35,12 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center sparkle">
-              <span className="text-white font-bold text-sm">P</span>
-            </div>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img 
+              src="/lovable-uploads/1fad3257-35a4-46aa-93b5-c1631158f76b.png" 
+              alt="PixieAI Logo" 
+              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
+            />
             <span className="text-xl font-bold magic-text group-hover:scale-105 transition-transform">
               PixieAI
             </span>

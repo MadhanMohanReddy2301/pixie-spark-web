@@ -217,10 +217,12 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">P</span>
-                </div>
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="/lovable-uploads/1fad3257-35a4-46aa-93b5-c1631158f76b.png" 
+                  alt="PixieAI Logo" 
+                  className="w-8 h-8 object-contain"
+                />
                 <span className="text-xl font-bold magic-text">PixieAI</span>
               </div>
               <p className="text-foreground/70 mb-4 max-w-md">
