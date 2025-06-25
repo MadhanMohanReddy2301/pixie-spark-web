@@ -24,22 +24,6 @@ const Projects = () => {
       category: 'LLM Applications'
     },
     {
-      title: 'Predictive Manufacturing Analytics',
-      client: 'GlobalManufacturing Corp',
-      industry: 'Manufacturing',
-      challenge: 'Unexpected equipment failures causing production delays and maintenance costs.',
-      solution: 'Implemented IoT sensors and ML models for predictive maintenance and quality control.',
-      results: [
-        '30% reduction in unplanned downtime',
-        '$2M annual savings in maintenance costs',
-        '25% improvement in product quality',
-        '90% accuracy in failure prediction'
-      ],
-      technologies: ['TensorFlow', 'IoT Sensors', 'Time Series Analysis', 'Azure', 'Power BI'],
-      image: '🏭',
-      category: 'Automation'
-    },
-    {
       title: 'Medical Image Analysis Platform',
       client: 'HealthTech Solutions',
       industry: 'Healthcare',
@@ -72,40 +56,104 @@ const Projects = () => {
       category: 'Document Processing'
     },
     {
-      title: 'Real-Time Fraud Detection Engine',
-      client: 'SecureBank',
-      industry: 'Financial Services',
-      challenge: 'Rising fraud losses and false positives affecting customer experience.',
-      solution: 'Deployed real-time ML models for transaction monitoring and risk assessment.',
+      title: 'Sales Analysis with AI/LLM',
+      client: 'RetailMega Corp',
+      industry: 'E-commerce',
+      challenge: 'Complex sales data analysis requiring manual interpretation and delayed insights.',
+      solution: 'Implemented LLM-powered sales analytics platform with natural language querying.',
       results: [
-        '90% reduction in fraud losses',
-        '50% decrease in false positives',
-        '<100ms transaction processing',
-        'Real-time risk scoring'
+        '80% faster insight generation',
+        '45% improvement in sales forecasting accuracy',
+        'Real-time trend identification',
+        'Natural language report generation'
       ],
-      technologies: ['Apache Kafka', 'Real-time ML', 'Anomaly Detection', 'Spark', 'Redis'],
-      image: '💳',
-      category: 'Risk Analytics'
+      technologies: ['GPT-4', 'Pandas', 'Streamlit', 'SQL', 'Power BI'],
+      image: '📊',
+      category: 'LLM Applications'
     },
     {
-      title: 'Supply Chain Optimization Platform',
-      client: 'GlobalRetail Inc.',
-      industry: 'Retail',
-      challenge: 'Inventory shortages and overstock issues causing revenue loss and customer dissatisfaction.',
-      solution: 'Implemented demand forecasting and automated inventory management system.',
+      title: 'Invoice Extraction with Agentic AI',
+      client: 'FinanceFlow Solutions',
+      industry: 'Financial Services',
+      challenge: 'Manual invoice processing causing delays and errors in accounts payable.',
+      solution: 'Deployed agentic AI system for automated invoice data extraction and validation.',
       results: [
-        '35% improvement in demand accuracy',
-        '20% reduction in inventory costs',
-        '99% stock availability for top products',
-        '$5M annual revenue increase'
+        '95% reduction in processing time',
+        '99.5% extraction accuracy',
+        '$200K annual cost savings',
+        'Zero manual data entry required'
       ],
-      technologies: ['Time Series Forecasting', 'Optimization Algorithms', 'API Integration', 'MongoDB'],
-      image: '📦',
-      category: 'Optimization'
+      technologies: ['OCR', 'Agentic AI', 'Document Processing', 'Python', 'FastAPI'],
+      image: '📄',
+      category: 'Automation'
+    },
+    {
+      title: 'Product Recommendations using LLMs',
+      client: 'ShopSmart Platform',
+      industry: 'E-commerce',
+      challenge: 'Low conversion rates due to generic product recommendations.',
+      solution: 'Built personalized recommendation engine using advanced LLMs and user behavior analysis.',
+      results: [
+        '60% increase in conversion rates',
+        '35% boost in average order value',
+        '250% improvement in click-through rates',
+        'Real-time personalization'
+      ],
+      technologies: ['LLMs', 'Collaborative Filtering', 'Vector Databases', 'React', 'Node.js'],
+      image: '🛍️',
+      category: 'LLM Applications'
+    },
+    {
+      title: 'SQL Agent - Talk with Your Databases',
+      client: 'DataDriven Enterprises',
+      industry: 'Technology',
+      challenge: 'Non-technical teams unable to query databases, creating bottlenecks for data access.',
+      solution: 'Created natural language to SQL agent enabling anyone to query databases conversationally.',
+      results: [
+        '90% reduction in data request tickets',
+        'Instant query responses',
+        'No SQL knowledge required',
+        '50+ different database queries daily'
+      ],
+      technologies: ['Natural Language Processing', 'SQL Generation', 'LangChain', 'PostgreSQL', 'Streamlit'],
+      image: '🗄️',
+      category: 'Database AI'
+    },
+    {
+      title: 'Synthetic Data Generation Platform',
+      client: 'AI Research Lab',
+      industry: 'Research & Development',
+      challenge: 'Limited training data availability due to privacy constraints and data scarcity.',
+      solution: 'Developed advanced synthetic data generation platform for creating realistic training datasets.',
+      results: [
+        '1000x increase in available training data',
+        '95% similarity to real data',
+        'Privacy-compliant data generation',
+        '60% improvement in model performance'
+      ],
+      technologies: ['GANs', 'Diffusion Models', 'Privacy Engineering', 'TensorFlow', 'PyTorch'],
+      image: '🧬',
+      category: 'Data Generation'
+    },
+    {
+      title: 'Sales and Customer Assistant',
+      client: 'SalesForce Pro',
+      industry: 'Sales & Marketing',
+      challenge: 'Sales teams struggling with customer relationship management and follow-up efficiency.',
+      solution: 'Implemented AI-powered sales assistant for customer interaction and pipeline management.',
+      results: [
+        '45% increase in sales conversion',
+        '70% improvement in follow-up rates',
+        'Automated lead scoring',
+        '24/7 customer query handling'
+      ],
+      technologies: ['Conversational AI', 'CRM Integration', 'Lead Scoring', 'WhatsApp API', 'Salesforce'],
+      image: '💼',
+      category: 'Sales AI'
     }
   ];
 
-  const categories = ['All', 'LLM Applications', 'Computer Vision', 'Automation', 'Document Processing', 'Risk Analytics', 'Optimization'];
+  const categories = ['All', 'LLM Applications', 'Computer Vision', 'Automation', 'Document Processing', 'Database AI', 'Data Generation', 'Sales AI'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
   const filteredProjects = selectedCategory === 'All' 

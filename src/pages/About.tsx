@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,32 +5,25 @@ import { Card, CardContent } from '@/components/ui/card';
 const About = () => {
   const team = [
     {
-      name: 'Dr. Alex Chen',
+      name: 'Madhan Reddy',
       role: 'CEO & Co-Founder',
-      bio: 'Former AI Research Director at Google. PhD in Machine Learning from Stanford.',
+      bio: 'Technical expert in Generative AI, Agentic AI, and LLMs with deep experience in building practical AI solutions.',
       avatar: '👨‍💼',
-      expertise: ['Machine Learning', 'Strategy', 'Product Vision']
+      expertise: ['Generative AI', 'Agentic AI', 'LLMs', 'AI Strategy']
     },
     {
-      name: 'Sarah Williams',
+      name: 'Pavan Reddy',
       role: 'CTO & Co-Founder',
-      bio: 'Ex-OpenAI Engineer. Expert in LLMs and generative AI systems.',
-      avatar: '👩‍💻',
-      expertise: ['LLMs', 'System Architecture', 'AI Safety']
+      bio: 'Technical specialist in Generative AI, LLM assistants, and AI system architecture with extensive development experience.',
+      avatar: '👨‍💻',
+      expertise: ['Generative AI', 'LLM Assistants', 'System Architecture', 'AI Development']
     },
     {
-      name: 'Marcus Johnson',
-      role: 'Head of Engineering',
-      bio: 'Former Tesla Autopilot engineer with 10+ years in AI development.',
-      avatar: '👨‍🔧',
-      expertise: ['Computer Vision', 'Robotics', 'MLOps']
-    },
-    {
-      name: 'Dr. Priya Patel',
-      role: 'Head of Research',
-      bio: 'PhD in AI from MIT. Published 50+ papers in top-tier conferences.',
+      name: 'Anitha Karre',
+      role: 'Head of Research & Co-Founder',
+      bio: 'Technical researcher specializing in LLMs, Generative AI, business analysis, and AI research methodologies.',
       avatar: '👩‍🔬',
-      expertise: ['NLP', 'Research', 'Innovation']
+      expertise: ['LLMs', 'Generative AI', 'Business Analysis', 'AI Research']
     }
   ];
 
@@ -153,11 +145,11 @@ const About = () => {
               Meet Our <span className="magic-text">Team</span>
             </h2>
             <p className="text-xl text-foreground/80">
-              World-class experts in AI and machine learning
+              Expert founders in AI and machine learning
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
             {team.map((member, index) => (
               <Card 
                 key={index} 
@@ -232,22 +224,22 @@ const About = () => {
             <p className="animate-fade-in-up">
               PixieAI was born from a simple observation: while AI technology was advancing 
               rapidly, most businesses struggled to harness its potential effectively. 
-              Founded in 2019 by a team of AI researchers and industry veterans, 
+              Founded by a team of AI experts and industry veterans, 
               we set out to bridge this gap.
             </p>
             
             <p className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Our founders, Dr. Alex Chen and Sarah Williams, met while working on 
-              cutting-edge AI projects at leading tech companies. They realized that 
-              the most sophisticated AI technologies were only accessible to a few 
-              large corporations, leaving countless businesses unable to benefit 
-              from AI's transformative power.
+              Our founders, Madhan Reddy, Pavan Reddy, and Anitha Karre, combined their 
+              expertise in Generative AI, LLMs, and Agentic AI to create practical solutions 
+              that deliver real business value. They realized that the most sophisticated 
+              AI technologies were only accessible to a few large corporations, leaving 
+              countless businesses unable to benefit from AI's transformative power.
             </p>
             
             <p className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              Today, PixieAI has helped over 100 companies across various industries 
+              Today, PixieAI has helped numerous companies across various industries 
               implement AI solutions that drive real business value. From startups 
-              to Fortune 500 companies, we've proven that with the right approach, 
+              to established enterprises, we've proven that with the right approach, 
               AI can be accessible, practical, and transformative for any business.
             </p>
           </div>
