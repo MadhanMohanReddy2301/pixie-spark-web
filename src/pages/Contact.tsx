@@ -62,51 +62,55 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      type: 'Email',
-      value: 'hello@pixieai.com',
-      description: 'For general inquiries and partnerships',
+      type: 'Email - Madhan Reddy',
+      value: 'madhanreddy@pixieai.in',
+      description: 'Co-founder & AI Solutions Lead',
       icon: '📧',
-      link: 'mailto:hello@pixieai.com'
+      link: 'mailto:madhanreddy@pixieai.in'
+    },
+    {
+      type: 'Email - Pavan Reddy',
+      value: 'pavanreddy@pixieai.in',
+      description: 'Co-founder & Technical Lead',
+      icon: '📧',
+      link: 'mailto:pavanreddy@pixieai.in'
     },
     {
       type: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Business hours: 9 AM - 6 PM PST',
+      value: '+91 8106255668',
+      description: 'Business hours: 9 AM - 6 PM IST',
       icon: '📞',
-      link: 'tel:+15551234567'
+      link: 'tel:+918106255668'
     },
     {
-      type: 'Address',
-      value: '123 AI Innovation Drive, San Francisco, CA 94105',
-      description: 'Our headquarters in the heart of Silicon Valley',
-      icon: '📍',
-      link: 'https://maps.google.com'
-    },
-    {
-      type: 'LinkedIn',
-      value: 'linkedin.com/company/pixie-ai',
-      description: 'Follow us for AI insights and updates',
-      icon: '💼',
-      link: 'https://linkedin.com/company/pixie-ai'
+      type: 'Phone',
+      value: '+91 9381054019',
+      description: 'Alternative contact number',
+      icon: '📞',
+      link: 'tel:+919381054019'
     }
   ];
 
   const faqs = [
     {
-      question: 'How long does a typical AI project take?',
-      answer: 'Project timelines vary based on complexity, but most implementations take 2-6 months from concept to deployment.'
+      question: 'How can AI agents help my business?',
+      answer: 'Our AI agents can automate customer support, handle inquiries on WhatsApp and social media, process data analysis tasks, and integrate with your existing databases for natural language queries.'
     },
     {
-      question: 'What is the minimum budget for an AI project?',
-      answer: 'Our projects typically start at $50K for smaller implementations, with enterprise solutions ranging from $200K+.'
+      question: 'What industries do you specialize in?',
+      answer: 'We serve FinTech, Healthcare, Retail, EdTech, and more. Our solutions are adaptable to any industry requiring intelligent automation and AI integration.'
     },
     {
-      question: 'Do you provide ongoing support after deployment?',
-      answer: 'Yes, we offer comprehensive support packages including monitoring, maintenance, and continuous optimization.'
+      question: 'Can you integrate AI with our existing databases?',
+      answer: 'Yes! We build database integrations that allow you to query your data using natural language - no SQL knowledge required. Just ask questions and get insights.'
     },
     {
-      question: 'Can you work with our existing technology stack?',
-      answer: 'Absolutely! We specialize in integrating AI solutions with existing systems and can work with most technology stacks.'
+      question: 'Do you build MCP servers for agentic AI systems?',
+      answer: 'Absolutely! We specialize in building MCP (Model Context Protocol) servers and integrating them with agentic AI systems for enhanced functionality and interoperability.'
+    },
+    {
+      question: 'How do you handle WhatsApp and social media integrations?',
+      answer: 'We are experts in integrating customer support agents with WhatsApp, Facebook Messenger, and other social media platforms, providing seamless automated customer experiences.'
     }
   ];
 
@@ -121,8 +125,8 @@ const Contact = () => {
             Get in <span className="magic-text">Touch</span>
           </h1>
           <p className="text-xl md:text-2xl text-foreground/80 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Ready to transform your business with AI? Let's discuss your project 
-            and explore how we can help you achieve your goals.
+            Ready to transform your business with Agentic AI, LLMs, and intelligent automation? 
+            Let's discuss how we can solve your real-world business challenges.
           </p>
         </div>
       </section>
@@ -190,7 +194,7 @@ const Contact = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
-                          placeholder="+1 (555) 123-4567"
+                          placeholder="+91 98765 43210"
                           className="bg-white/5 border-white/20 text-white placeholder:text-white/50"
                         />
                       </div>
@@ -206,12 +210,14 @@ const Contact = () => {
                             <SelectValue placeholder="Select a service" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="ai-consulting">AI Consulting</SelectItem>
-                            <SelectItem value="llm-development">LLM App Development</SelectItem>
-                            <SelectItem value="multimodal-ai">Multi-Modal AI</SelectItem>
-                            <SelectItem value="automation">Intelligent Automation</SelectItem>
-                            <SelectItem value="custom-ai">Custom AI Models</SelectItem>
-                            <SelectItem value="not-sure">Not Sure / Multiple</SelectItem>
+                            <SelectItem value="ai-agents">AI Agents & Copilots</SelectItem>
+                            <SelectItem value="llm-apps">Custom LLM Applications</SelectItem>
+                            <SelectItem value="social-integration">WhatsApp/Social Media Integration</SelectItem>
+                            <SelectItem value="database-ai">Database AI Integration</SelectItem>
+                            <SelectItem value="mcp-servers">MCP Server Development</SelectItem>
+                            <SelectItem value="data-analysis">Excel Data Analysis AI</SelectItem>
+                            <SelectItem value="automation">Process Automation</SelectItem>
+                            <SelectItem value="consulting">AI Consulting</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -225,10 +231,11 @@ const Contact = () => {
                             <SelectValue placeholder="Select budget range" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="50k-100k">$50K - $100K</SelectItem>
-                            <SelectItem value="100k-250k">$100K - $250K</SelectItem>
-                            <SelectItem value="250k-500k">$250K - $500K</SelectItem>
-                            <SelectItem value="500k+">$500K+</SelectItem>
+                            <SelectItem value="10k-25k">₹10K - ₹25K</SelectItem>
+                            <SelectItem value="25k-50k">₹25K - ₹50K</SelectItem>
+                            <SelectItem value="50k-100k">₹50K - ₹1L</SelectItem>
+                            <SelectItem value="100k-250k">₹1L - ₹2.5L</SelectItem>
+                            <SelectItem value="250k+">₹2.5L+</SelectItem>
                             <SelectItem value="not-sure">Not Sure</SelectItem>
                           </SelectContent>
                         </Select>
@@ -245,9 +252,9 @@ const Contact = () => {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="asap">ASAP</SelectItem>
-                          <SelectItem value="1-3-months">1-3 Months</SelectItem>
-                          <SelectItem value="3-6-months">3-6 Months</SelectItem>
-                          <SelectItem value="6-12-months">6-12 Months</SelectItem>
+                          <SelectItem value="1-2-weeks">1-2 Weeks</SelectItem>
+                          <SelectItem value="1-month">1 Month</SelectItem>
+                          <SelectItem value="2-3-months">2-3 Months</SelectItem>
                           <SelectItem value="just-exploring">Just Exploring</SelectItem>
                         </SelectContent>
                       </Select>
@@ -260,7 +267,7 @@ const Contact = () => {
                       <Textarea
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
-                        placeholder="Tell us about your project, challenges, and goals..."
+                        placeholder="Tell us about your business challenges, automation needs, or AI integration requirements..."
                         rows={4}
                         className="bg-white/5 border-white/20 text-white placeholder:text-white/50"
                         required
@@ -287,8 +294,8 @@ const Contact = () => {
                     Let's <span className="magic-text">Connect</span>
                   </h2>
                   <p className="text-foreground/80 mb-8">
-                    We're here to answer your questions and help you explore the possibilities 
-                    of AI for your business. Reach out through any of the channels below.
+                    We're here to bridge the gap between cutting-edge AI and practical business outcomes. 
+                    Reach out to discuss how our agentic AI solutions can transform your operations.
                   </p>
                 </div>
 
@@ -322,7 +329,7 @@ const Contact = () => {
                     </h3>
                     <p className="text-foreground/70 text-sm">
                       We respond to all inquiries within 24 hours during business days. 
-                      For urgent matters, please call us directly.
+                      For urgent AI automation needs, please call us directly.
                     </p>
                   </CardContent>
                 </Card>
@@ -340,7 +347,7 @@ const Contact = () => {
               Frequently Asked <span className="magic-text">Questions</span>
             </h2>
             <p className="text-xl text-foreground/80">
-              Common questions about our AI solutions and services
+              Common questions about our AI solutions and integration services
             </p>
           </div>
 
@@ -368,16 +375,26 @@ const Contact = () => {
             Ready to Start <span className="magic-text">Building</span>?
           </h2>
           <p className="text-xl text-foreground/80 mb-8">
-            Don't wait for the future of AI - create it with us today. 
-            Schedule a free consultation to discuss your project.
+            Transform your business with intelligent AI solutions that work in the real world. 
+            Let's discuss your automation and AI integration needs.
           </p>
-          <Button 
-            size="lg"
-            className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0 px-8 py-4 text-lg hover-glow"
-            onClick={() => window.open('https://calendly.com/pixieai', '_blank')}
-          >
-            Schedule Free Consultation
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0 px-8 py-4 text-lg hover-glow"
+              onClick={() => window.open('mailto:madhanreddy@pixieai.in', '_blank')}
+            >
+              Email Us Now
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg glass-effect"
+              onClick={() => window.open('tel:+918106255668', '_blank')}
+            >
+              Call Now
+            </Button>
+          </div>
         </div>
       </section>
     </div>

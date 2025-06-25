@@ -9,49 +9,49 @@ import { Link } from 'react-router-dom';
 const Index = () => {
   const services = [
     {
-      title: 'AI Consulting',
-      description: 'Strategic guidance to integrate AI into your business processes and decision-making.',
-      icon: '🧠',
-      features: ['Strategy Development', 'AI Readiness Assessment', 'Implementation Roadmap']
-    },
-    {
-      title: 'LLM App Development',
-      description: 'Custom applications powered by large language models for your specific needs.',
+      title: 'AI Agents & Copilots',
+      description: 'Intelligent agents that automate tasks, assist teams, and enhance productivity across your organization.',
       icon: '🤖',
-      features: ['Custom Chatbots', 'Content Generation', 'Document Analysis']
+      features: ['Smart AI Copilots', 'Task Automation', 'Decision Support']
     },
     {
-      title: 'Multi-Modal AI',
-      description: 'Advanced AI systems that understand and process text, images, audio, and video.',
-      icon: '🎭',
-      features: ['Computer Vision', 'Speech Processing', 'Multimodal Analytics']
+      title: 'Social Media AI Integration',
+      description: 'Expert integration of customer support agents with WhatsApp, Facebook, and other platforms.',
+      icon: '💬',
+      features: ['WhatsApp Integration', 'Multi-platform Bots', '24/7 Support']
     },
     {
-      title: 'Automation Workflows',
-      description: 'Intelligent automation solutions that streamline operations and reduce manual work.',
-      icon: '⚡',
-      features: ['Process Automation', 'Smart Workflows', 'Integration Solutions']
+      title: 'Database AI Querying',
+      description: 'Query your databases using natural language - no SQL knowledge required.',
+      icon: '🗄️',
+      features: ['Natural Language Queries', 'Real-time Analytics', 'Automated Reports']
+    },
+    {
+      title: 'Excel Data Analysis AI',
+      description: 'Advanced AI-powered data analysis and automation for Excel workflows.',
+      icon: '📊',
+      features: ['Excel Automation', 'Pattern Recognition', 'Predictive Analytics']
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Chen',
-      role: 'CTO, TechFlow Inc.',
-      content: 'PixieAI transformed our customer service with their intelligent chatbot. 40% reduction in response time!',
-      avatar: '👩‍💼'
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'CEO, DataDrive Solutions',
-      content: 'The automation workflows saved us countless hours. ROI was evident within the first month.',
+      name: 'Rajesh Kumar',
+      role: 'CTO, FinTech Solutions',
+      content: 'PixieAI transformed our customer service with WhatsApp integration. 60% reduction in response time!',
       avatar: '👨‍💼'
     },
     {
-      name: 'Emily Johnson',
-      role: 'Operations Director, GlobalTech',
-      content: 'Their multi-modal AI solution revolutionized how we process and analyze our data streams.',
-      avatar: '👩‍🔬'
+      name: 'Priya Sharma',
+      role: 'Operations Head, E-commerce',
+      content: 'The database AI integration eliminated our need for SQL experts. Natural language queries work perfectly!',
+      avatar: '👩‍💼'
+    },
+    {
+      name: 'Arjun Reddy',
+      role: 'Founder, EdTech Startup',
+      content: 'Their agentic AI system revolutionized our data analysis. Excel automation saved us countless hours.',
+      avatar: '👨‍🎓'
     }
   ];
 
@@ -65,10 +65,10 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="magic-text">Our Services</span>
+              <span className="magic-text">Our Solutions</span>
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed to accelerate your business transformation
+              Agentic AI and LLM solutions that solve real-world business challenges
             </p>
           </div>
 
@@ -107,16 +107,16 @@ const Index = () => {
                 Why Choose <span className="magic-text">PixieAI</span>?
               </h2>
               <p className="text-xl text-foreground/80 mb-8">
-                We combine cutting-edge technology with deep business expertise to deliver 
-                AI solutions that actually work in the real world.
+                We're an AI-first innovation company that bridges the gap between cutting-edge AI 
+                and practical business outcomes, empowering teams with intelligent, scalable solutions.
               </p>
               
               <div className="space-y-6">
                 {[
-                  { title: 'Expert Team', desc: 'PhD-level AI researchers and experienced engineers' },
-                  { title: 'Proven Results', desc: 'Track record of successful implementations across industries' },
-                  { title: 'Ongoing Support', desc: '24/7 monitoring and continuous optimization' },
-                  { title: 'Scalable Solutions', desc: 'Built to grow with your business needs' }
+                  { title: 'Agentic AI Experts', desc: 'Specialized in autonomous AI agents and intelligent automation' },
+                  { title: 'Real-world Impact', desc: 'Solving actual business challenges with practical AI solutions' },
+                  { title: 'Rapid Implementation', desc: 'Fast deployment with minimal disruption to operations' },
+                  { title: 'Enterprise Ready', desc: 'Scalable, secure solutions that grow with your business' }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-4">
                     <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex-shrink-0 mt-1"></div>
@@ -133,10 +133,10 @@ const Index = () => {
               <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 glass-effect">
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { metric: '500%', label: 'Avg. Efficiency Gain' },
-                    { metric: '$2M+', label: 'Cost Savings Generated' },
-                    { metric: '99.9%', label: 'System Uptime' },
-                    { metric: '48hrs', label: 'Avg. Implementation' }
+                    { metric: '50+', label: 'AI Projects Delivered' },
+                    { metric: '10+', label: 'Industries Served' },
+                    { metric: '24hr', label: 'Average Response Time' },
+                    { metric: '99%', label: 'Client Satisfaction' }
                   ].map((stat, index) => (
                     <div key={index} className="text-center p-4 bg-white/5 rounded-lg">
                       <div className="text-2xl font-bold magic-text mb-1">{stat.metric}</div>
@@ -158,7 +158,7 @@ const Index = () => {
               What Our <span className="magic-text">Clients Say</span>
             </h2>
             <p className="text-xl text-foreground/80">
-              Real results from real businesses
+              Real results from real businesses across India
             </p>
           </div>
 
@@ -190,7 +190,7 @@ const Index = () => {
             Ready to Transform Your Business with <span className="magic-text">AI</span>?
           </h2>
           <p className="text-xl text-foreground/80 mb-8">
-            Join the AI revolution today. Let's discuss how we can help you achieve your goals.
+            Join the AI revolution today. Let's discuss how our agentic AI solutions can solve your business challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -224,8 +224,8 @@ const Index = () => {
                 <span className="text-xl font-bold magic-text">PixieAI</span>
               </div>
               <p className="text-foreground/70 mb-4 max-w-md">
-                Transforming businesses through intelligent AI solutions. 
-                Your partner in the AI-driven future.
+                AI-first innovation company dedicated to solving real-world business challenges 
+                using Agentic AI, Generative AI, and LLMs.
               </p>
               <div className="text-sm text-foreground/60">
                 © 2024 PixieAI. All rights reserved.
@@ -251,9 +251,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold text-white mb-4">Contact</h4>
               <div className="space-y-2 text-sm text-foreground/70">
-                <div>hello@pixieai.com</div>
-                <div>+1 (555) 123-4567</div>
-                <div>San Francisco, CA</div>
+                <div>madhanreddy@pixieai.in</div>
+                <div>pavanreddy@pixieai.in</div>
+                <div>+91 8106255668</div>
+                <div>+91 9381054019</div>
               </div>
             </div>
           </div>

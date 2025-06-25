@@ -8,128 +8,128 @@ import { Link } from 'react-router-dom';
 const Services = () => {
   const services = [
     {
-      title: 'AI Strategy Consulting',
-      description: 'Comprehensive AI roadmap and strategic guidance for your digital transformation.',
-      icon: '🧠',
-      features: [
-        'AI Readiness Assessment',
-        'Strategic Planning & Roadmap',
-        'ROI Analysis & Business Case',
-        'Technology Stack Recommendations',
-        'Change Management Support',
-        'Ongoing Strategic Advisory'
-      ],
-      process: [
-        'Current State Analysis',
-        'Opportunity Identification',
-        'Strategy Development',
-        'Implementation Planning'
-      ]
-    },
-    {
-      title: 'LLM Application Development',
-      description: 'Custom applications powered by large language models tailored to your business needs.',
+      title: 'AI Agents & Copilots',
+      description: 'Intelligent AI agents that automate tasks, assist teams, and enhance productivity across your organization.',
       icon: '🤖',
       features: [
-        'Custom Chatbots & Virtual Assistants',
-        'Document Processing & Analysis',
-        'Content Generation Systems',
-        'Knowledge Base Integration',
-        'Multi-language Support',
-        'API Development & Integration'
+        'Smart AI Copilots for Teams',
+        'Customer Support Automation',
+        'Task & Workflow Automation',
+        'Decision Support Systems',
+        'Multi-platform Integration',
+        'Conversational AI Interfaces'
       ],
       process: [
-        'Requirements Gathering',
-        'Model Selection & Fine-tuning',
-        'Application Development',
-        'Testing & Deployment'
+        'Business Process Analysis',
+        'Agent Design & Training',
+        'Integration & Testing',
+        'Deployment & Monitoring'
       ]
     },
     {
-      title: 'Multi-Modal AI Solutions',
-      description: 'Advanced AI systems that understand and process multiple types of data.',
-      icon: '🎭',
+      title: 'WhatsApp & Social Media AI',
+      description: 'Expert integration of customer support agents with WhatsApp, Facebook, and other social platforms.',
+      icon: '💬',
       features: [
-        'Computer Vision Systems',
-        'Speech Recognition & Synthesis',
-        'Image & Video Analysis',
-        'Audio Processing',
-        'Cross-modal Understanding',
-        'Real-time Processing'
+        'WhatsApp Business API Integration',
+        'Facebook Messenger Bots',
+        'Instagram & Twitter Automation',
+        '24/7 Customer Support',
+        'Multi-language Support',
+        'Rich Media & Interactive Messages'
+      ],
+      process: [
+        'Platform Assessment',
+        'Bot Development',
+        'API Integration',
+        'Testing & Launch'
+      ]
+    },
+    {
+      title: 'Database AI Integration',
+      description: 'Transform your databases with natural language querying - no SQL knowledge required.',
+      icon: '🗄️',
+      features: [
+        'Natural Language to SQL',
+        'Voice-to-Database Queries',
+        'Automated Report Generation',
+        'Data Visualization AI',
+        'Real-time Analytics',
+        'Secure Database Connections'
+      ],
+      process: [
+        'Database Schema Analysis',
+        'NL Interface Development',
+        'Security Implementation',
+        'User Training & Support'
+      ]
+    },
+    {
+      title: 'Excel Data Analysis AI',
+      description: 'Advanced AI-powered data analysis and automation for Excel workflows and business intelligence.',
+      icon: '📊',
+      features: [
+        'Automated Excel Processing',
+        'Intelligent Data Cleaning',
+        'Pattern Recognition',
+        'Predictive Analytics',
+        'Custom Formula Generation',
+        'Report Automation'
       ],
       process: [
         'Data Assessment',
-        'Model Architecture Design',
-        'Training & Optimization',
-        'Integration & Scaling'
+        'AI Model Training',
+        'Excel Integration',
+        'Automation Setup'
       ]
     },
     {
-      title: 'Intelligent Automation',
-      description: 'End-to-end automation workflows that learn and adapt to your business processes.',
-      icon: '⚡',
+      title: 'MCP Server Development',
+      description: 'Building Model Context Protocol servers for seamless agentic AI system integration.',
+      icon: '🔗',
       features: [
-        'Process Mining & Analysis',
-        'Workflow Automation',
-        'Intelligent Document Processing',
-        'Decision Automation',
-        'Exception Handling',
-        'Performance Monitoring'
+        'MCP Architecture Design',
+        'Custom Protocol Implementation',
+        'Agentic AI Integration',
+        'Scalable Server Solutions',
+        'API Standardization',
+        'Cross-platform Compatibility'
       ],
       process: [
-        'Process Discovery',
-        'Automation Design',
-        'Implementation & Testing',
-        'Monitoring & Optimization'
+        'Requirements Analysis',
+        'Server Architecture',
+        'Protocol Implementation',
+        'System Integration'
       ]
     },
     {
-      title: 'AI Infrastructure & MLOps',
-      description: 'Scalable infrastructure and operations for your AI and machine learning initiatives.',
-      icon: '🏗️',
+      title: 'Custom LLM Applications',
+      description: 'Bespoke applications powered by large language models tailored to your specific business needs.',
+      icon: '🧠',
       features: [
-        'Cloud Infrastructure Setup',
-        'Model Deployment Pipelines',
-        'Monitoring & Alerting',
-        'A/B Testing Frameworks',
-        'Data Pipeline Management',
-        'Security & Compliance'
+        'Custom LLM Fine-tuning',
+        'Domain-specific Models',
+        'RAG Implementation',
+        'Multi-modal AI Systems',
+        'Enterprise-grade Security',
+        'Scalable Deployment'
       ],
       process: [
-        'Infrastructure Assessment',
-        'Architecture Design',
-        'Platform Implementation',
-        'Operations Setup'
-      ]
-    },
-    {
-      title: 'Custom AI Model Development',
-      description: 'Bespoke AI models designed and trained specifically for your unique challenges.',
-      icon: '🔬',
-      features: [
-        'Problem Definition & Scoping',
-        'Data Collection & Preparation',
-        'Model Architecture Design',
-        'Training & Validation',
-        'Performance Optimization',
-        'Deployment & Maintenance'
-      ],
-      process: [
-        'Data Analysis',
-        'Model Design',
-        'Training & Evaluation',
-        'Production Deployment'
+        'Use Case Analysis',
+        'Model Selection & Training',
+        'Application Development',
+        'Performance Optimization'
       ]
     }
   ];
 
   const industries = [
-    { name: 'Healthcare', icon: '🏥', desc: 'Medical imaging, patient care, drug discovery' },
-    { name: 'Finance', icon: '💰', desc: 'Risk assessment, fraud detection, algorithmic trading' },
-    { name: 'Retail', icon: '🛍️', desc: 'Personalization, inventory optimization, customer service' },
-    { name: 'Manufacturing', icon: '🏭', desc: 'Quality control, predictive maintenance, supply chain' },
-    { name: 'Education', icon: '🎓', desc: 'Personalized learning, assessment, content creation' },
-    { name: 'Logistics', icon: '🚚', desc: 'Route optimization, demand forecasting, warehouse automation' }
+    { name: 'FinTech', icon: '💳', desc: 'AI-powered financial analysis, risk assessment, and automated trading' },
+    { name: 'Healthcare', icon: '🏥', desc: 'Patient data analysis, diagnostic assistance, and workflow automation' },
+    { name: 'Retail & E-commerce', icon: '🛍️', desc: 'Personalization, inventory optimization, and customer service automation' },
+    { name: 'EdTech', icon: '🎓', desc: 'Personalized learning, automated assessment, and educational content generation' },
+    { name: 'Manufacturing', icon: '🏭', desc: 'Quality control, predictive maintenance, and supply chain optimization' },
+    { name: 'IT Services', icon: '💻', desc: 'Automated support, code generation, and intelligent system monitoring' }
   ];
 
   return (
@@ -143,8 +143,8 @@ const Services = () => {
             Our <span className="magic-text">Services</span>
           </h1>
           <p className="text-xl md:text-2xl text-foreground/80 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Comprehensive AI solutions designed to transform your business operations, 
-            enhance decision-making, and drive sustainable growth.
+            Comprehensive Agentic AI and LLM solutions designed to solve real-world business challenges 
+            and unlock new value through intelligent, scalable AI systems.
           </p>
         </div>
       </section>
@@ -208,7 +208,7 @@ const Services = () => {
               Industries We <span className="magic-text">Serve</span>
             </h2>
             <p className="text-xl text-foreground/80">
-              Tailored AI solutions across diverse sectors
+              AI-first solutions across diverse sectors and business challenges
             </p>
           </div>
 
@@ -230,61 +230,52 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process Overview */}
+      {/* Our Expertise */}
       <section className="py-20 px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="magic-text">Process</span>
+              Why Choose <span className="magic-text">PixieAI</span>?
             </h2>
             <p className="text-xl text-foreground/80">
-              A proven methodology that ensures successful AI implementation
+              We bridge the gap between cutting-edge AI and practical business outcomes
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                step: '01',
-                title: 'Discovery & Assessment',
-                description: 'We analyze your business needs, data infrastructure, and AI readiness.',
-                icon: '🔍'
+                title: 'Agentic AI Experts',
+                description: 'Specialized in building intelligent agents that think and act autonomously',
+                icon: '🎯'
               },
               {
-                step: '02',
-                title: 'Strategy & Planning',
-                description: 'Develop a comprehensive AI strategy aligned with your business goals.',
-                icon: '📋'
+                title: 'Real-world Solutions',
+                description: 'Practical AI that solves actual business problems, not just demos',
+                icon: '🔧'
               },
               {
-                step: '03',
-                title: 'Development & Implementation',
-                description: 'Build and deploy custom AI solutions using best practices.',
-                icon: '⚙️'
+                title: 'Rapid Deployment',
+                description: 'Fast implementation with minimal disruption to your operations',
+                icon: '⚡'
               },
               {
-                step: '04',
-                title: 'Optimization & Support',
-                description: 'Continuous monitoring, optimization, and ongoing support.',
-                icon: '📈'
+                title: 'Enterprise Ready',
+                description: 'Scalable, secure, and adaptable solutions for growing businesses',
+                icon: '🏢'
               }
-            ].map((phase, index) => (
-              <div 
+            ].map((benefit, index) => (
+              <Card 
                 key={index} 
-                className="text-center animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="glass-effect hover-glow transition-all duration-300 border-white/10 text-center animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">{phase.icon}</span>
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xs font-bold text-white">
-                    {phase.step}
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{phase.title}</h3>
-                <p className="text-foreground/70 text-sm">{phase.description}</p>
-              </div>
+                <CardContent className="p-6">
+                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
+                  <p className="text-foreground/70 text-sm">{benefit.description}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -297,8 +288,8 @@ const Services = () => {
             Ready to Get <span className="magic-text">Started</span>?
           </h2>
           <p className="text-xl text-foreground/80 mb-8">
-            Let's discuss how our AI solutions can transform your business. 
-            Get a free consultation with our experts.
+            Transform your business with intelligent AI solutions that work in the real world. 
+            Let's discuss how our agentic AI can solve your specific challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
