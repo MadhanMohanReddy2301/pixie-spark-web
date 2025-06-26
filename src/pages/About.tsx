@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import { Card, CardContent } from '@/components/ui/card';
@@ -9,21 +8,21 @@ const About = () => {
       name: 'Madhan Reddy',
       role: 'CEO & Co-Founder',
       bio: 'Technical expert in Generative AI, Agentic AI, and LLMs with deep experience in building practical AI solutions.',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+      avatar: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=100&h=100&fit=crop',
       expertise: ['Generative AI', 'Agentic AI', 'LLMs', 'AI Strategy']
     },
     {
       name: 'Pavan Reddy',
       role: 'CTO & Co-Founder',
       bio: 'Technical specialist in Generative AI, LLM assistants, and AI system architecture with extensive development experience.',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+      avatar: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=100&h=100&fit=crop',
       expertise: ['Generative AI', 'LLM Assistants', 'System Architecture', 'AI Development']
     },
     {
       name: 'Anitha Karre',
       role: 'Head of Research & Co-Founder',
       bio: 'Technical researcher specializing in LLMs, Generative AI, business analysis, and AI research methodologies.',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face',
+      avatar: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=100&h=100&fit=crop',
       expertise: ['LLMs', 'Generative AI', 'Business Analysis', 'AI Research']
     }
   ];
@@ -158,7 +157,7 @@ const About = () => {
                 className="border-0 shadow-sm hover:shadow-md transition-shadow duration-300 bg-white"
               >
                 <CardContent className="p-8 text-center">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden">
+                  <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden animate-pulse">
                     <img src={member.avatar} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{member.name}</h3>
@@ -193,11 +192,10 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
-              { number: '100+', label: 'Projects Completed', icon: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=60&h=60&fit=crop' },
-              { number: '50+', label: 'Happy Clients', icon: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop' },
-              { number: '5', label: 'Years Experience', icon: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=60&h=60&fit=crop' },
+              { number: '10+', label: 'Projects Completed', icon: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=60&h=60&fit=crop' },
+              { number: '7+', label: 'Happy Clients', icon: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop' },
               { number: '24/7', label: 'Support Available', icon: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=60&h=60&fit=crop' },
             ].map((stat, index) => (
               <div 

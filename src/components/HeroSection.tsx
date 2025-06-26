@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -22,17 +21,17 @@ const HeroSection = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Subtle particle animation
+    // Neural network animation
     const nodes: Array<{x: number, y: number, vx: number, vy: number}> = [];
-    const nodeCount = 30;
+    const nodeCount = 50;
 
     // Initialize nodes
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
       });
     }
 
@@ -50,8 +49,8 @@ const HeroSection = () => {
 
         // Draw node
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 1.5, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(59, 130, 246, 0.3)';
+        ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(59, 130, 246, 0.4)';
         ctx.fill();
 
         // Draw connections
@@ -61,12 +60,12 @@ const HeroSection = () => {
               Math.pow(node.x - otherNode.x, 2) + Math.pow(node.y - otherNode.y, 2)
             );
 
-            if (distance < 120) {
+            if (distance < 150) {
               ctx.beginPath();
               ctx.moveTo(node.x, node.y);
               ctx.lineTo(otherNode.x, otherNode.y);
-              ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 120)})`;
-              ctx.lineWidth = 0.5;
+              ctx.strokeStyle = `rgba(59, 130, 246, ${0.15 * (1 - distance / 150)})`;
+              ctx.lineWidth = 1;
               ctx.stroke();
             }
           }
@@ -85,7 +84,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50 pt-20">
-      {/* Animated Background */}
+      {/* Neural Network Background */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-0"
@@ -93,7 +92,7 @@ const HeroSection = () => {
       />
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6 py-20">
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-6 py-20">
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-light mb-8 leading-tight text-gray-900">
             <span className="font-semibold text-blue-600">AI Solutions</span>

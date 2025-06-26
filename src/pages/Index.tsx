@@ -13,12 +13,12 @@ const Index = () => {
       description: 'Intelligent agents that automate tasks, assist teams, and enhance productivity across your organization.',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
       features: ['Smart AI Copilots', 'Task Automation', 'Decision Support'],
-      icon: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=60&h=60&fit=crop'
+      icon: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=60&h=60&fit=crop'
     },
     {
       title: 'Social Media AI Integration',
       description: 'Expert integration of customer support agents with WhatsApp, Facebook, and other platforms.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop',
       features: ['WhatsApp Integration', 'Multi-platform Bots', '24/7 Support'],
       icon: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=60&h=60&fit=crop'
     },
@@ -43,19 +43,19 @@ const Index = () => {
       name: 'Rajesh Kumar',
       role: 'CTO, FinTech Solutions',
       content: 'PixieAI transformed our customer service with WhatsApp integration. 60% reduction in response time!',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face'
+      avatar: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=80&h=80&fit=crop'
     },
     {
       name: 'Priya Sharma',
       role: 'Operations Head, E-commerce',
       content: 'The database AI integration eliminated our need for SQL experts. Natural language queries work perfectly!',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face'
+      avatar: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=80&h=80&fit=crop'
     },
     {
       name: 'Arjun Reddy',
       role: 'Founder, EdTech Startup',
       content: 'Their agentic AI system revolutionized our data analysis. Excel automation saved us countless hours.',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
+      avatar: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=80&h=80&fit=crop'
     }
   ];
 
@@ -203,11 +203,13 @@ const Index = () => {
               >
                 <CardContent className="p-6">
                   <div className="flex items-center mb-6">
-                    <img 
-                      src={testimonial.avatar} 
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-blue-100"
-                    />
+                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-100 animate-pulse">
+                      <img 
+                        src={testimonial.avatar} 
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <div className="ml-4">
                       <div className="font-semibold text-gray-900">{testimonial.name}</div>
                       <div className="text-sm text-blue-600">{testimonial.role}</div>
