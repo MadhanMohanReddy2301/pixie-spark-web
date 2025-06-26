@@ -84,7 +84,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 pt-20">
       {/* Animated Background */}
       <canvas
         ref={canvasRef}
@@ -101,9 +101,9 @@ const HeroSection = () => {
       <div className="absolute bottom-40 left-20 w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-6xl mx-auto px-6 mt-16">
         <div className="animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="magic-text">AI Solutions</span>
             <br />
             <span className="text-white">That Transform</span>
@@ -113,7 +113,7 @@ const HeroSection = () => {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
             Harness the power of Generative AI, LLMs, and intelligent automation 
             to solve complex business challenges and unlock unprecedented growth.
           </p>
@@ -140,7 +140,7 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
             {[
-              { number: '50+', label: 'AI Projects Delivered' },
+              { number: '10+', label: 'AI Projects Delivered' },
               { number: '95%', label: 'Client Satisfaction' },
               { number: '40%', label: 'Average Cost Reduction' },
               { number: '24/7', label: 'AI Support Systems' },

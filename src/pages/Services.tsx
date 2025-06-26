@@ -10,7 +10,7 @@ const Services = () => {
     {
       title: 'AI Agents & Copilots',
       description: 'Intelligent AI agents that automate tasks, assist teams, and enhance productivity across your organization.',
-      icon: '🤖',
+      icon: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=80&h=80&fit=crop',
       features: [
         'Smart AI Copilots for Teams',
         'Customer Support Automation',
@@ -29,7 +29,7 @@ const Services = () => {
     {
       title: 'WhatsApp & Social Media AI',
       description: 'Expert integration of customer support agents with WhatsApp, Facebook, and other social platforms.',
-      icon: '💬',
+      icon: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=80&h=80&fit=crop',
       features: [
         'WhatsApp Business API Integration',
         'Facebook Messenger Bots',
@@ -48,7 +48,7 @@ const Services = () => {
     {
       title: 'Database AI Integration',
       description: 'Transform your databases with natural language querying - no SQL knowledge required.',
-      icon: '🗄️',
+      icon: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=80&h=80&fit=crop',
       features: [
         'Natural Language to SQL',
         'Voice-to-Database Queries',
@@ -67,7 +67,7 @@ const Services = () => {
     {
       title: 'Excel Data Analysis AI',
       description: 'Advanced AI-powered data analysis and automation for Excel workflows and business intelligence.',
-      icon: '📊',
+      icon: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop',
       features: [
         'Automated Excel Processing',
         'Intelligent Data Cleaning',
@@ -86,7 +86,7 @@ const Services = () => {
     {
       title: 'MCP Server Development',
       description: 'Building Model Context Protocol servers for seamless agentic AI system integration.',
-      icon: '🔗',
+      icon: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=80&h=80&fit=crop',
       features: [
         'MCP Architecture Design',
         'Custom Protocol Implementation',
@@ -105,7 +105,7 @@ const Services = () => {
     {
       title: 'Custom LLM Applications',
       description: 'Bespoke applications powered by large language models tailored to your specific business needs.',
-      icon: '🧠',
+      icon: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=80&h=80&fit=crop',
       features: [
         'Custom LLM Fine-tuning',
         'Domain-specific Models',
@@ -124,12 +124,12 @@ const Services = () => {
   ];
 
   const industries = [
-    { name: 'FinTech', icon: '💳', desc: 'AI-powered financial analysis, risk assessment, and automated trading' },
-    { name: 'Healthcare', icon: '🏥', desc: 'Patient data analysis, diagnostic assistance, and workflow automation' },
-    { name: 'Retail & E-commerce', icon: '🛍️', desc: 'Personalization, inventory optimization, and customer service automation' },
-    { name: 'EdTech', icon: '🎓', desc: 'Personalized learning, automated assessment, and educational content generation' },
-    { name: 'Manufacturing', icon: '🏭', desc: 'Quality control, predictive maintenance, and supply chain optimization' },
-    { name: 'IT Services', icon: '💻', desc: 'Automated support, code generation, and intelligent system monitoring' }
+    { name: 'FinTech', icon: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=80&h=80&fit=crop', desc: 'AI-powered financial analysis, risk assessment, and automated trading' },
+    { name: 'Healthcare', icon: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=80&h=80&fit=crop', desc: 'Patient data analysis, diagnostic assistance, and workflow automation' },
+    { name: 'Retail & E-commerce', icon: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=80&h=80&fit=crop', desc: 'Personalization, inventory optimization, and customer service automation' },
+    { name: 'EdTech', icon: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=80&h=80&fit=crop', desc: 'Personalized learning, automated assessment, and educational content generation' },
+    { name: 'Manufacturing', icon: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=80&h=80&fit=crop', desc: 'Quality control, predictive maintenance, and supply chain optimization' },
+    { name: 'IT Services', icon: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=80&h=80&fit=crop', desc: 'Automated support, code generation, and intelligent system monitoring' }
   ];
 
   return (
@@ -161,7 +161,9 @@ const Services = () => {
               >
                 <CardContent className="p-8">
                   <div className="flex items-start space-x-4 mb-6">
-                    <div className="text-4xl">{service.icon}</div>
+                    <div className="w-16 h-16 rounded-lg overflow-hidden border-2 border-orange-400">
+                      <img src={service.icon} alt={service.title} className="w-full h-full object-cover" />
+                    </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-semibold mb-3 text-white">{service.title}</h3>
                       <p className="text-foreground/80">{service.description}</p>
@@ -220,7 +222,9 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-4">{industry.icon}</div>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border-2 border-orange-400">
+                    <img src={industry.icon} alt={industry.name} className="w-full h-full object-cover" />
+                  </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{industry.name}</h3>
                   <p className="text-foreground/70 text-sm">{industry.desc}</p>
                 </CardContent>
@@ -247,22 +251,22 @@ const Services = () => {
               {
                 title: 'Agentic AI Experts',
                 description: 'Specialized in building intelligent agents that think and act autonomously',
-                icon: '🎯'
+                icon: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=80&h=80&fit=crop'
               },
               {
                 title: 'Real-world Solutions',
                 description: 'Practical AI that solves actual business problems, not just demos',
-                icon: '🔧'
+                icon: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop'
               },
               {
                 title: 'Rapid Deployment',
                 description: 'Fast implementation with minimal disruption to your operations',
-                icon: '⚡'
+                icon: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=80&h=80&fit=crop'
               },
               {
                 title: 'Enterprise Ready',
                 description: 'Scalable, secure, and adaptable solutions for growing businesses',
-                icon: '🏢'
+                icon: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop'
               }
             ].map((benefit, index) => (
               <Card 
@@ -271,7 +275,9 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-6">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border-2 border-orange-400">
+                    <img src={benefit.icon} alt={benefit.title} className="w-full h-full object-cover" />
+                  </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
                   <p className="text-foreground/70 text-sm">{benefit.description}</p>
                 </CardContent>
