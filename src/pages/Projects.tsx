@@ -20,40 +20,8 @@ const Projects = () => {
         '24/7 multilingual support coverage'
       ],
       technologies: ['GPT-4', 'Custom NLP Models', 'React', 'Python', 'AWS'],
-      image: '🤖',
+      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop',
       category: 'LLM Applications'
-    },
-    {
-      title: 'Medical Image Analysis Platform',
-      client: 'HealthTech Solutions',
-      industry: 'Healthcare',
-      challenge: 'Radiologists overwhelmed with image analysis workload, leading to delayed diagnoses.',
-      solution: 'Developed AI-powered medical imaging system for automated preliminary screening.',
-      results: [
-        '70% faster initial screening',
-        '98% accuracy in anomaly detection',
-        '50% improvement in diagnosis workflow',
-        'FDA-compliant deployment'
-      ],
-      technologies: ['Computer Vision', 'PyTorch', 'DICOM Processing', 'Kubernetes', 'React'],
-      image: '🏥',
-      category: 'Computer Vision'
-    },
-    {
-      title: 'Intelligent Document Processing',
-      client: 'LegalPro Associates',
-      industry: 'Legal Services',
-      challenge: 'Manual document review consuming 80% of billable hours, limiting case capacity.',
-      solution: 'Built automated document classification and information extraction system.',
-      results: [
-        '85% reduction in document processing time',
-        '300% increase in case handling capacity',
-        '$500K annual cost savings',
-        '99% accuracy in document classification'
-      ],
-      technologies: ['OCR', 'NLP', 'Document AI', 'Flask', 'PostgreSQL'],
-      image: '📋',
-      category: 'Document Processing'
     },
     {
       title: 'Sales Analysis with AI/LLM',
@@ -68,7 +36,7 @@ const Projects = () => {
         'Natural language report generation'
       ],
       technologies: ['GPT-4', 'Pandas', 'Streamlit', 'SQL', 'Power BI'],
-      image: '📊',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
       category: 'LLM Applications'
     },
     {
@@ -84,7 +52,7 @@ const Projects = () => {
         'Zero manual data entry required'
       ],
       technologies: ['OCR', 'Agentic AI', 'Document Processing', 'Python', 'FastAPI'],
-      image: '📄',
+      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop',
       category: 'Automation'
     },
     {
@@ -100,7 +68,7 @@ const Projects = () => {
         'Real-time personalization'
       ],
       technologies: ['LLMs', 'Collaborative Filtering', 'Vector Databases', 'React', 'Node.js'],
-      image: '🛍️',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
       category: 'LLM Applications'
     },
     {
@@ -116,11 +84,11 @@ const Projects = () => {
         '50+ different database queries daily'
       ],
       technologies: ['Natural Language Processing', 'SQL Generation', 'LangChain', 'PostgreSQL', 'Streamlit'],
-      image: '🗄️',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
       category: 'Database AI'
     },
     {
-      title: 'Synthetic Data Generation Platform',
+      title: 'Synthetic Data Generation',
       client: 'AI Research Lab',
       industry: 'Research & Development',
       challenge: 'Limited training data availability due to privacy constraints and data scarcity.',
@@ -132,7 +100,7 @@ const Projects = () => {
         '60% improvement in model performance'
       ],
       technologies: ['GANs', 'Diffusion Models', 'Privacy Engineering', 'TensorFlow', 'PyTorch'],
-      image: '🧬',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop',
       category: 'Data Generation'
     },
     {
@@ -148,12 +116,12 @@ const Projects = () => {
         '24/7 customer query handling'
       ],
       technologies: ['Conversational AI', 'CRM Integration', 'Lead Scoring', 'WhatsApp API', 'Salesforce'],
-      image: '💼',
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
       category: 'Sales AI'
     }
   ];
 
-  const categories = ['All', 'LLM Applications', 'Computer Vision', 'Automation', 'Document Processing', 'Database AI', 'Data Generation', 'Sales AI'];
+  const categories = ['All', 'LLM Applications', 'Automation', 'Database AI', 'Data Generation', 'Sales AI'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
   const filteredProjects = selectedCategory === 'All' 
@@ -168,7 +136,7 @@ const Projects = () => {
       <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         <div className="container mx-auto max-w-7xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-            Our <span className="magic-text">Projects</span>
+            Our <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">Projects</span>
           </h1>
           <p className="text-xl md:text-2xl text-foreground/80 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Real-world AI implementations delivering measurable business impact 
@@ -178,7 +146,7 @@ const Projects = () => {
       </section>
 
       {/* Filter Categories */}
-      <section className="py-8 px-6 bg-background/50">
+      <section className="py-8 px-6 bg-background/50 pt-20">
         <div className="container mx-auto max-w-7xl">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
@@ -188,9 +156,9 @@ const Projects = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`${
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
-                    : "border-white/20 text-white hover:bg-white/10 glass-effect"
-                } transition-all duration-300`}
+                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
+                    : "border-orange-400/50 text-white hover:bg-orange-500/20 glass-effect"
+                } transition-all duration-300 hover:scale-105`}
               >
                 {category}
               </Button>
@@ -200,30 +168,35 @@ const Projects = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 pt-32">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
               <Card 
                 key={index} 
-                className="glass-effect hover-glow transition-all duration-300 border-white/10 animate-fade-in-up"
+                className="glass-effect hover-glow transition-all duration-500 border-white/10 animate-fade-in-up group overflow-hidden"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                  <div className="absolute top-4 left-4 flex gap-2">
+                    <span className="px-2 py-1 bg-orange-500/90 text-white rounded-full text-xs font-medium">
+                      {project.category}
+                    </span>
+                    <span className="px-2 py-1 bg-red-500/90 text-white rounded-full text-xs font-medium">
+                      {project.industry}
+                    </span>
+                  </div>
+                </div>
                 <CardContent className="p-8">
-                  <div className="flex items-start space-x-4 mb-6">
-                    <div className="text-4xl">{project.image}</div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs">
-                          {project.category}
-                        </span>
-                        <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs">
-                          {project.industry}
-                        </span>
-                      </div>
-                      <h3 className="text-2xl font-semibold mb-2 text-white">{project.title}</h3>
-                      <p className="text-blue-300 mb-4">{project.client}</p>
-                    </div>
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-semibold mb-2 text-white">{project.title}</h3>
+                    <p className="text-orange-300 mb-4 font-medium">{project.client}</p>
                   </div>
 
                   <div className="space-y-6">
@@ -242,7 +215,7 @@ const Projects = () => {
                       <ul className="space-y-1">
                         {project.results.map((result, idx) => (
                           <li key={idx} className="text-sm text-foreground/70 flex items-center">
-                            <span className="mr-2 text-green-400">✓</span>
+                            <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
                             {result}
                           </li>
                         ))}
@@ -255,7 +228,7 @@ const Projects = () => {
                         {project.technologies.map((tech, idx) => (
                           <span 
                             key={idx} 
-                            className="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded text-xs"
+                            className="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded text-xs border border-cyan-500/30"
                           >
                             {tech}
                           </span>
@@ -271,31 +244,33 @@ const Projects = () => {
       </section>
 
       {/* Success Metrics */}
-      <section className="py-20 px-6 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+      <section className="py-20 px-6 pt-32 bg-gradient-to-r from-orange-900/20 to-red-900/20">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Proven <span className="magic-text">Results</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+              Proven <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">Results</span>
             </h2>
-            <p className="text-xl text-foreground/80">
+            <p className="text-xl text-foreground/80 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               Consistent value delivery across all our projects
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { metric: '50+', label: 'Successful Deployments', icon: '🚀' },
-              { metric: '$50M+', label: 'Client Cost Savings', icon: '💰' },
-              { metric: '95%', label: 'Average Accuracy', icon: '🎯' },
-              { metric: '6 Months', label: 'Average ROI Timeline', icon: '⏱️' },
+              { metric: '10+', label: 'Successful Deployments', image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=80&h=80&fit=crop' },
+              { metric: '$50M+', label: 'Client Cost Savings', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop' },
+              { metric: '95%', label: 'Average Accuracy', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop' },
+              { metric: '6 Months', label: 'Average ROI Timeline', image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=80&h=80&fit=crop' },
             ].map((stat, index) => (
               <div 
                 key={index} 
-                className="text-center animate-fade-in-up glass-effect p-6 rounded-lg"
+                className="text-center animate-fade-in-up glass-effect p-6 rounded-lg hover:bg-white/5 transition-all duration-300 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-3xl mb-2">{stat.icon}</div>
-                <div className="text-3xl font-bold magic-text mb-2">{stat.metric}</div>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border-2 border-orange-400 group-hover:border-red-400 transition-colors">
+                  <img src={stat.image} alt={stat.label} className="w-full h-full object-cover" />
+                </div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">{stat.metric}</div>
                 <div className="text-sm text-foreground/70">{stat.label}</div>
               </div>
             ))}
@@ -304,20 +279,20 @@ const Projects = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 pt-32">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Start Your <span className="magic-text">Success Story</span>?
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+            Ready to Start Your <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">Success Story</span>?
           </h2>
-          <p className="text-xl text-foreground/80 mb-8">
+          <p className="text-xl text-foreground/80 mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Join our growing list of successful AI implementations. 
             Let's discuss how we can help you achieve similar results.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Button 
               asChild
               size="lg"
-              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0 px-8 py-4 text-lg hover-glow"
+              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 px-8 py-4 text-lg hover-glow transform hover:scale-105 transition-all duration-300"
             >
               <Link to="/contact">Start Your Project</Link>
             </Button>
@@ -325,7 +300,7 @@ const Projects = () => {
               asChild
               variant="outline"
               size="lg"
-              className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg glass-effect"
+              className="border-orange-400/50 text-white hover:bg-orange-500/20 px-8 py-4 text-lg glass-effect transform hover:scale-105 transition-all duration-300"
             >
               <Link to="/services">Explore Services</Link>
             </Button>

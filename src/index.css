@@ -58,6 +58,7 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -67,14 +68,17 @@
 
 @layer components {
   .magic-text {
-    @apply bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-pulse;
+    @apply bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
   }
 
   .neural-grid {
     background-image: 
-      linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+      linear-gradient(rgba(249, 115, 22, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(249, 115, 22, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
+    animation: neural-pulse 4s ease-in-out infinite;
   }
 
   .sparkle {
@@ -100,18 +104,123 @@
   }
 
   .glass-effect {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
   .hover-glow {
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .hover-glow:hover {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
-    transform: translateY(-2px);
+    box-shadow: 
+      0 0 40px rgba(249, 115, 22, 0.4),
+      0 0 80px rgba(239, 68, 68, 0.2),
+      0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  .animate-gradient {
+    background-size: 400% 400%;
+    animation: gradient-shift 8s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Enhanced Animations */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0; 
+    transform: scale(0) rotate(0deg); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1) rotate(180deg); 
+  }
+}
+
+@keyframes neural-pulse {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: scale(1.01);
+  }
+}
+
+@keyframes fade-in-up {
+  0% { 
+    opacity: 0; 
+    transform: translateY(40px) scale(0.95); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
+}
+
+@keyframes fade-in-left {
+  0% { 
+    opacity: 0; 
+    transform: translateX(-40px) scale(0.95); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateX(0) scale(1); 
+  }
+}
+
+@keyframes fade-in-right {
+  0% { 
+    opacity: 0; 
+    transform: translateX(40px) scale(0.95); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateX(0) scale(1); 
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -130,10 +239,48 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+  }
+  
+  .hover-glow:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+/* Improved focus states for accessibility */
+:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
