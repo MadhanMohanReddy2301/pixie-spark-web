@@ -10,7 +10,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -27,10 +27,10 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-black/95 backdrop-blur-xl border-b border-white/20 shadow-2xl shadow-black/50' 
-        : 'bg-black/80 backdrop-blur-lg'
+        ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm' 
+        : 'bg-white/90 backdrop-blur-lg'
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -39,9 +39,9 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/1fad3257-35a4-46aa-93b5-c1631158f76b.png" 
               alt="PixieAI Logo" 
-              className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+              className="w-8 h-8 object-contain group-hover:scale-110 transition-transform duration-300"
             />
-            <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+            <span className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
               PixieAI
             </span>
           </Link>
@@ -52,10 +52,10 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-base font-medium transition-all duration-300 hover:text-orange-400 hover:scale-105 relative group px-3 py-2 rounded-lg hover:bg-white/10 ${
+                className={`text-sm font-medium transition-colors duration-300 hover:text-blue-600 px-3 py-2 rounded ${
                   location.pathname === item.path 
-                    ? 'text-orange-400 bg-white/10' 
-                    : 'text-white'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-700'
                 }`}
               >
                 {item.name}
@@ -63,7 +63,7 @@ const Navigation = () => {
             ))}
             <Button 
               asChild 
-              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 px-6 py-2 rounded-xl font-semibold transform hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"
+              className="bg-blue-600 hover:bg-blue-700 text-white border-0 px-6 py-2 rounded font-medium"
             >
               <Link to="/contact">Get Started</Link>
             </Button>
@@ -71,17 +71,17 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-3 rounded-lg hover:bg-white/10 transition-colors"
+            className="md:hidden p-3 rounded hover:bg-gray-100 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`bg-orange-400 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+              <span className={`bg-gray-800 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
                 isMobileMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
               }`}></span>
-              <span className={`bg-orange-400 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+              <span className={`bg-gray-800 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
                 isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
               }`}></span>
-              <span className={`bg-orange-400 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+              <span className={`bg-gray-800 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
                 isMobileMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
               }`}></span>
             </div>
@@ -90,16 +90,16 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-6 pb-6 border-t border-white/20">
+          <div className="md:hidden mt-6 pb-6 border-t border-gray-200">
             <div className="flex flex-col space-y-4 mt-6">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`text-base font-medium transition-colors hover:text-orange-400 px-4 py-3 rounded-lg hover:bg-white/10 ${
+                  className={`text-sm font-medium transition-colors px-4 py-3 rounded hover:bg-gray-50 ${
                     location.pathname === item.path 
-                      ? 'text-orange-400 bg-white/10' 
-                      : 'text-white'
+                      ? 'text-blue-600 bg-blue-50' 
+                      : 'text-gray-700'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -108,7 +108,7 @@ const Navigation = () => {
               ))}
               <Button 
                 asChild 
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 w-fit mx-4 px-6 py-3 rounded-xl font-semibold"
+                className="bg-blue-600 hover:bg-blue-700 text-white border-0 w-fit mx-4 px-6 py-3 rounded font-medium"
               >
                 <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                   Get Started
