@@ -27,15 +27,25 @@ const ChatBot = () => {
     scrollToBottom();
   }, [messages]);
 
-  // Auto-open chatbot when page loads
+  // Auto-open chatbot only on desktop/laptop screens (not mobile)
   useEffect(() => {
     if (!hasAutoOpened) {
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-        setHasAutoOpened(true);
-      }, 2000); // Auto-open after 2 seconds
+      const checkScreenSize = () => {
+        const isDesktop = window.innerWidth >= 1024; // lg breakpoint in Tailwind
+        if (isDesktop) {
+          const timer = setTimeout(() => {
+            setIsOpen(true);
+            setHasAutoOpened(true);
+          }, 2000); // Auto-open after 2 seconds on desktop
+          return () => clearTimeout(timer);
+        } else {
+          setHasAutoOpened(true); // Don't auto-open on mobile
+        }
+      };
 
-      return () => clearTimeout(timer);
+      checkScreenSize();
+      window.addEventListener('resize', checkScreenSize);
+      return () => window.removeEventListener('resize', checkScreenSize);
     }
   }, [hasAutoOpened]);
 
