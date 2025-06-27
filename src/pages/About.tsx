@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
-import { Users, Target, Award, Lightbulb, Rocket, Heart } from 'lucide-react';
+import { Users, Target, Award, Lightbulb, Rocket, Heart, Brain, Search, BarChart3 } from 'lucide-react';
 
 const About = () => {
   const teamMembers = [
@@ -12,13 +12,22 @@ const About = () => {
       name: 'Madhan Reddy',
       role: 'Co-Founder & AI Architect',
       description: 'Leading AI innovations with deep expertise in machine learning and neural networks.',
+      skills: ['Machine Learning', 'Neural Networks', 'AI Strategy'],
       icon: <Users className="w-16 h-16 text-blue-400 animate-pulse" />
     },
     {
       name: 'Pavan Reddy',
       role: 'Co-Founder & Tech Lead',
       description: 'Driving technical excellence and scalable AI solutions for enterprise clients.',
+      skills: ['System Architecture', 'Enterprise AI', 'Technical Leadership'],
       icon: <Rocket className="w-16 h-16 text-green-400 animate-pulse" />
+    },
+    {
+      name: 'Anitha Karre',
+      role: 'Head of Research & Co-Founder',
+      description: 'Technical researcher specializing in LLMs, Generative AI, business analysis, and AI research methodologies.',
+      skills: ['LLMs', 'Generative AI', 'Business Analysis', 'AI Research'],
+      icon: <Brain className="w-16 h-16 text-purple-400 animate-pulse" />
     }
   ];
 
@@ -113,7 +122,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card 
                 key={index} 
@@ -127,7 +136,17 @@ const About = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
                   <p className="text-orange-300 font-semibold mb-4">{member.role}</p>
-                  <p className="text-gray-300 leading-relaxed">{member.description}</p>
+                  <p className="text-gray-300 leading-relaxed mb-4">{member.description}</p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {member.skills.map((skill, skillIndex) => (
+                      <span 
+                        key={skillIndex}
+                        className="px-3 py-1 bg-orange-400/20 text-orange-300 rounded-full text-sm font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
