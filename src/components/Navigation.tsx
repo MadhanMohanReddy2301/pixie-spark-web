@@ -37,11 +37,11 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img 
-              src="/lovable-uploads/1fad3257-35a4-46aa-93b5-c1631158f76b.png" 
+              src="/lovable-uploads/d083078f-9e90-4dd9-98a3-a43e84f87daf.png" 
               alt="PixieAI Logo" 
-              className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+              className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
             />
-            <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+            <span className="text-3xl font-black text-white group-hover:scale-105 transition-transform duration-300">
               PixieAI
             </span>
           </Link>

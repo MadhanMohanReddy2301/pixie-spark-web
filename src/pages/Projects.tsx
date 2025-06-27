@@ -1,127 +1,48 @@
 
 import React from 'react';
 import Navigation from '@/components/Navigation';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'AI-Powered Customer Service Revolution',
-      client: 'TechFlow Inc.',
-      industry: 'SaaS',
-      challenge: 'High customer support costs and slow response times affecting customer satisfaction.',
-      solution: 'Deployed an intelligent chatbot with natural language understanding and seamless human handoff.',
-      results: [
-        '40% reduction in response time',
-        '60% cost savings on support operations',
-        '95% customer satisfaction rate',
-        '24/7 multilingual support coverage'
-      ],
-      technologies: ['GPT-4', 'Custom NLP Models', 'React', 'Python', 'AWS'],
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop',
-      category: 'LLM Applications'
+      title: 'E-commerce Recommendation Engine',
+      description: 'AI-powered product recommendation system that increased conversion rates by 35% for a major e-commerce platform.',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+      technologies: ['Python', 'TensorFlow', 'AWS', 'Redis'],
+      category: 'Machine Learning',
+      results: ['35% increase in conversion', '50% better user engagement', '20% revenue growth']
     },
     {
-      title: 'Sales Analysis with AI/LLM',
-      client: 'RetailMega Corp',
-      industry: 'E-commerce',
-      challenge: 'Complex sales data analysis requiring manual interpretation and delayed insights.',
-      solution: 'Implemented LLM-powered sales analytics platform with natural language querying.',
-      results: [
-        '80% faster insight generation',
-        '45% improvement in sales forecasting accuracy',
-        'Real-time trend identification',
-        'Natural language report generation'
-      ],
-      technologies: ['GPT-4', 'Pandas', 'Streamlit', 'SQL', 'Power BI'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-      category: 'LLM Applications'
-    },
-    {
-      title: 'Invoice Extraction with Agentic AI',
-      client: 'FinanceFlow Solutions',
-      industry: 'Financial Services',
-      challenge: 'Manual invoice processing causing delays and errors in accounts payable.',
-      solution: 'Deployed agentic AI system for automated invoice data extraction and validation.',
-      results: [
-        '95% reduction in processing time',
-        '99.5% extraction accuracy',
-        '$200K annual cost savings',
-        'Zero manual data entry required'
-      ],
-      technologies: ['OCR', 'Agentic AI', 'Document Processing', 'Python', 'FastAPI'],
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop',
-      category: 'Automation'
-    },
-    {
-      title: 'Product Recommendations using LLMs',
-      client: 'ShopSmart Platform',
-      industry: 'E-commerce',
-      challenge: 'Low conversion rates due to generic product recommendations.',
-      solution: 'Built personalized recommendation engine using advanced LLMs and user behavior analysis.',
-      results: [
-        '60% increase in conversion rates',
-        '35% boost in average order value',
-        '250% improvement in click-through rates',
-        'Real-time personalization'
-      ],
-      technologies: ['LLMs', 'Collaborative Filtering', 'Vector Databases', 'React', 'Node.js'],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      category: 'LLM Applications'
-    },
-    {
-      title: 'SQL Agent - Talk with Your Databases',
-      client: 'DataDriven Enterprises',
-      industry: 'Technology',
-      challenge: 'Non-technical teams unable to query databases, creating bottlenecks for data access.',
-      solution: 'Created natural language to SQL agent enabling anyone to query databases conversationally.',
-      results: [
-        '90% reduction in data request tickets',
-        'Instant query responses',
-        'No SQL knowledge required',
-        '50+ different database queries daily'
-      ],
-      technologies: ['Natural Language Processing', 'SQL Generation', 'LangChain', 'PostgreSQL', 'Streamlit'],
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
-      category: 'Database AI'
-    },
-    {
-      title: 'Synthetic Data Generation',
-      client: 'AI Research Lab',
-      industry: 'Research & Development',
-      challenge: 'Limited training data availability due to privacy constraints and data scarcity.',
-      solution: 'Developed advanced synthetic data generation platform for creating realistic training datasets.',
-      results: [
-        '1000x increase in available training data',
-        '95% similarity to real data',
-        'Privacy-compliant data generation',
-        '60% improvement in model performance'
-      ],
-      technologies: ['GANs', 'Diffusion Models', 'Privacy Engineering', 'TensorFlow', 'PyTorch'],
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop',
-      category: 'Data Generation'
+      title: 'Document Intelligence System',
+      description: 'Automated document processing and information extraction system for legal firms, reducing manual work by 80%.',
+      image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=400&fit=crop',
+      technologies: ['Python', 'OCR', 'NLP', 'MongoDB'],
+      category: 'Document AI',
+      results: ['80% reduction in manual work', '99% accuracy rate', '70% faster processing']
     },
     {
       title: 'Sales and Customer Assistant',
-      client: 'SalesForce Pro',
-      industry: 'Sales & Marketing',
-      challenge: 'Sales teams struggling with customer relationship management and follow-up efficiency.',
-      solution: 'Implemented AI-powered sales assistant for customer interaction and pipeline management.',
-      results: [
-        '45% increase in sales conversion',
-        '70% improvement in follow-up rates',
-        'Automated lead scoring',
-        '24/7 customer query handling'
-      ],
-      technologies: ['Conversational AI', 'CRM Integration', 'Lead Scoring', 'WhatsApp API', 'Salesforce'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-      category: 'Sales AI'
+      description: 'Intelligent chatbot for sales support and customer service, handling 90% of inquiries automatically.',
+      image: 'https://images.unsplash.com/photo-1553484771-cc0d9b8c2b33?w=600&h=400&fit=crop',
+      technologies: ['Node.js', 'OpenAI API', 'React', 'WebSocket'],
+      category: 'Conversational AI',
+      results: ['90% automated inquiry handling', '24/7 availability', '60% cost reduction']
+    },
+    {
+      title: 'Predictive Maintenance Platform',
+      description: 'IoT-based predictive maintenance system for manufacturing equipment, preventing 95% of unplanned downtime.',
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop',
+      technologies: ['Python', 'Apache Kafka', 'InfluxDB', 'Grafana'],
+      category: 'IoT & Analytics',
+      results: ['95% downtime prevention', '30% maintenance cost savings', 'Real-time monitoring']
     }
   ];
 
-  const categories = ['All', 'LLM Applications', 'Automation', 'Database AI', 'Data Generation', 'Sales AI'];
+  const categories = ['All', 'Machine Learning', 'Document AI', 'Conversational AI', 'IoT & Analytics'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
   const filteredProjects = selectedCategory === 'All' 
@@ -133,32 +54,31 @@ const Projects = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
-        <div className="container mx-auto max-w-7xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+      <section className="pt-32 pb-20 px-6">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
             Our <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">Projects</span>
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Real-world AI implementations delivering measurable business impact 
-            across industries and use cases.
+          <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+            Discover how we've helped businesses transform their operations with cutting-edge AI solutions.
           </p>
         </div>
       </section>
 
-      {/* Filter Categories */}
-      <section className="py-8 px-6 bg-background/50 pt-20">
-        <div className="container mx-auto max-w-7xl">
+      {/* Category Filter */}
+      <section className="pb-12 px-6">
+        <div className="container mx-auto max-w-4xl">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
-                className={`${
+                className={`px-6 py-2 rounded-full transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
-                    : "border-orange-400/50 text-white hover:bg-orange-500/20 glass-effect"
-                } transition-all duration-300 hover:scale-105`}
+                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white border-0'
+                    : 'border-orange-400/50 text-orange-400 hover:bg-orange-500/20'
+                }`}
               >
                 {category}
               </Button>
@@ -168,73 +88,74 @@ const Projects = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 px-6 pt-32">
+      <section className="py-12 px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {filteredProjects.map((project, index) => (
               <Card 
                 key={index} 
-                className="glass-effect hover-glow transition-all duration-500 border-white/10 animate-fade-in-up group overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group bg-white/10 backdrop-blur-sm border border-white/20 hover:border-orange-400/50 transition-all duration-500 hover:transform hover:scale-105 overflow-hidden"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
-                  <div className="absolute top-4 left-4 flex gap-2">
-                    <span className="px-2 py-1 bg-orange-500/90 text-white rounded-full text-xs font-medium">
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white border-0">
                       {project.category}
-                    </span>
-                    <span className="px-2 py-1 bg-red-500/90 text-white rounded-full text-xs font-medium">
-                      {project.industry}
-                    </span>
+                    </Badge>
                   </div>
                 </div>
-                <CardContent className="p-8">
+                
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                    {project.title}
+                  </CardTitle>
+                </CardHeader>
+                
+                <CardContent className="pt-0">
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+                  
                   <div className="mb-6">
-                    <h3 className="text-2xl font-semibold mb-2 text-white">{project.title}</h3>
-                    <p className="text-orange-300 mb-4 font-medium">{project.client}</p>
+                    <h4 className="text-sm font-semibold text-orange-400 mb-3">Key Results:</h4>
+                    <div className="space-y-2">
+                      {project.results.map((result, idx) => (
+                        <div key={idx} className="flex items-center text-green-300">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                          <span className="text-sm">{result}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="font-semibold text-red-300 mb-2">Challenge</h4>
-                      <p className="text-foreground/70 text-sm">{project.challenge}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-orange-400 mb-3">Technologies:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, idx) => (
+                        <Badge 
+                          key={idx} 
+                          variant="outline" 
+                          className="border-orange-400/30 text-orange-300 hover:bg-orange-500/20"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
                     </div>
-
-                    <div>
-                      <h4 className="font-semibold text-green-300 mb-2">Solution</h4>
-                      <p className="text-foreground/70 text-sm">{project.solution}</p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-yellow-300 mb-2">Results</h4>
-                      <ul className="space-y-1">
-                        {project.results.map((result, idx) => (
-                          <li key={idx} className="text-sm text-foreground/70 flex items-center">
-                            <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
-                            {result}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-cyan-300 mb-2">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, idx) => (
-                          <span 
-                            key={idx} 
-                            className="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded text-xs border border-cyan-500/30"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                  </div>
+                  
+                  <div className="flex gap-4">
+                    <Button 
+                      size="sm" 
+                      className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 flex-1"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      View Details
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -243,66 +164,30 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Success Metrics */}
-      <section className="py-20 px-6 pt-32 bg-gradient-to-r from-orange-900/20 to-red-900/20">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
-              Proven <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">Results</span>
-            </h2>
-            <p className="text-xl text-foreground/80 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Consistent value delivery across all our projects
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { metric: '10+', label: 'Successful Deployments', image: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=80&h=80&fit=crop' },
-              { metric: '$50M+', label: 'Client Cost Savings', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop' },
-              { metric: '95%', label: 'Average Accuracy', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop' },
-              { metric: '6 Months', label: 'Average ROI Timeline', image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=80&h=80&fit=crop' },
-            ].map((stat, index) => (
-              <div 
-                key={index} 
-                className="text-center animate-fade-in-up glass-effect p-6 rounded-lg hover:bg-white/5 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border-2 border-orange-400 group-hover:border-red-400 transition-colors">
-                  <img src={stat.image} alt={stat.label} className="w-full h-full object-cover" />
-                </div>
-                <div className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">{stat.metric}</div>
-                <div className="text-sm text-foreground/70">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-6 pt-32">
+      <section className="py-20 px-6 bg-white/5">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
-            Ready to Start Your <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">Success Story</span>?
+          <h2 className="text-5xl font-bold mb-8 text-white">
+            Ready to Start Your <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">AI Project</span>?
           </h2>
-          <p className="text-xl text-foreground/80 mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Join our growing list of successful AI implementations. 
-            Let's discuss how we can help you achieve similar results.
+          <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+            Let's discuss how we can create a custom AI solution for your business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button 
               asChild
               size="lg"
-              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 px-8 py-4 text-lg hover-glow transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 px-10 py-6 text-lg font-semibold rounded-xl transform hover:scale-105 transition-all duration-300"
             >
-              <Link to="/contact">Start Your Project</Link>
+              <a href="/contact">Get Free Consultation</a>
             </Button>
             <Button 
               asChild
               variant="outline"
               size="lg"
-              className="border-orange-400/50 text-white hover:bg-orange-500/20 px-8 py-4 text-lg glass-effect transform hover:scale-105 transition-all duration-300"
+              className="border-2 border-orange-400/50 text-white hover:bg-orange-500/20 px-10 py-6 text-lg font-semibold rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300"
             >
-              <Link to="/services">Explore Services</Link>
+              <a href="/services">View Our Services</a>
             </Button>
           </div>
         </div>

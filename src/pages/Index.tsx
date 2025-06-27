@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
@@ -5,6 +6,7 @@ import ChatBot from '@/components/ChatBot';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
+import { Bot, Users, Zap, TrendingUp } from 'lucide-react';
 
 const Index = () => {
   const services = [
@@ -18,7 +20,7 @@ const Index = () => {
     {
       title: 'Social Media AI Integration',
       description: 'Expert integration of customer support agents with WhatsApp, Facebook, and other platforms.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=600&h=400&fit=crop',
       features: ['WhatsApp Integration', 'Multi-platform Bots', '24/7 Support'],
       icon: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=60&h=60&fit=crop'
     },
@@ -43,19 +45,19 @@ const Index = () => {
       name: 'Rajesh Kumar',
       role: 'CTO, FinTech Solutions',
       content: 'PixieAI transformed our customer service with WhatsApp integration. 60% reduction in response time!',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face'
+      icon: <Bot className="w-12 h-12 text-orange-400 animate-pulse" />
     },
     {
       name: 'Priya Sharma',
       role: 'Operations Head, E-commerce',
       content: 'The database AI integration eliminated our need for SQL experts. Natural language queries work perfectly!',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face'
+      icon: <Users className="w-12 h-12 text-blue-400 animate-pulse" />
     },
     {
       name: 'Arjun Reddy',
       role: 'Founder, EdTech Startup',
       content: 'Their agentic AI system revolutionized our data analysis. Excel automation saved us countless hours.',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
+      icon: <TrendingUp className="w-12 h-12 text-green-400 animate-pulse" />
     }
   ];
 
@@ -203,11 +205,9 @@ const Index = () => {
               >
                 <CardContent className="p-8">
                   <div className="flex items-center mb-6">
-                    <img 
-                      src={testimonial.avatar} 
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-orange-400"
-                    />
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-r from-orange-400/20 to-red-400/20 flex items-center justify-center border-2 border-orange-400/30">
+                      {testimonial.icon}
+                    </div>
                     <div className="ml-4">
                       <div className="text-lg font-bold text-white">{testimonial.name}</div>
                       <div className="text-sm text-orange-300">{testimonial.role}</div>
@@ -257,7 +257,7 @@ const Index = () => {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <img 
-                  src="/lovable-uploads/1fad3257-35a4-46aa-93b5-c1631158f76b.png" 
+                  src="/lovable-uploads/d083078f-9e90-4dd9-98a3-a43e84f87daf.png" 
                   alt="PixieAI Logo" 
                   className="w-10 h-10 object-contain"
                 />

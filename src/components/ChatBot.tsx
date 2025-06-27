@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { X, MessageCircle, Send, Loader2 } from 'lucide-react';
 
 interface ChatMessage {
@@ -132,35 +133,37 @@ const ChatBot = () => {
             </CardHeader>
             
             <CardContent className="flex-1 flex flex-col p-0">
-              {/* Messages Area */}
-              <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                {messages.map((message, index) => (
-                  <div
-                    key={index}
-                    className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
-                  >
+              {/* Messages Area with Scroll */}
+              <ScrollArea className="flex-1 p-4">
+                <div className="space-y-4">
+                  {messages.map((message, index) => (
                     <div
-                      className={`max-w-[80%] p-3 rounded-lg ${
-                        message.role === 'user'
-                          ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                          : 'bg-gray-100 text-gray-800'
-                      }`}
+                      key={index}
+                      className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
-                      <p className="text-sm leading-relaxed">{message.content}</p>
+                      <div
+                        className={`max-w-[80%] p-3 rounded-lg ${
+                          message.role === 'user'
+                            ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
+                            : 'bg-gray-100 text-gray-800'
+                        }`}
+                      >
+                        <p className="text-sm leading-relaxed">{message.content}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
-                
-                {isLoading && (
-                  <div className="flex justify-start">
-                    <div className="bg-gray-100 p-3 rounded-lg">
-                      <Loader2 className="w-4 h-4 animate-spin text-gray-600" />
+                  ))}
+                  
+                  {isLoading && (
+                    <div className="flex justify-start">
+                      <div className="bg-gray-100 p-3 rounded-lg">
+                        <Loader2 className="w-4 h-4 animate-spin text-gray-600" />
+                      </div>
                     </div>
-                  </div>
-                )}
-                
-                <div ref={messagesEndRef} />
-              </div>
+                  )}
+                  
+                  <div ref={messagesEndRef} />
+                </div>
+              </ScrollArea>
 
               {/* Input Area */}
               <div className="border-t p-4">
