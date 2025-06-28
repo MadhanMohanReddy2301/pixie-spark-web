@@ -289,6 +289,7 @@ const Index = () => {
             <div>
               <h4 className="font-bold text-white mb-6 text-lg">Contact</h4>
               <div className="space-y-3 text-gray-300">
+                <div className="font-medium">Madhan Reddy - Founder & CEO</div>
                 <div className="font-medium">madhanreddy@pixieai.in</div>
                 <div className="font-medium">pavanreddy@pixieai.in</div>
                 <div className="font-medium">+91 8106255668</div>
