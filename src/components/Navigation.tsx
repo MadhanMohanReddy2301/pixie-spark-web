@@ -48,7 +48,7 @@ const Navigation = () => {
               className="w-8 h-8 sm:w-12 sm:h-12 object-contain group-hover:scale-110 transition-transform duration-300"
             />
             <span className="text-xl sm:text-3xl font-black text-white group-hover:scale-105 transition-transform duration-300">
-              PixieAI
+              Pixie<span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">AI</span>
             </span>
           </Link>
 

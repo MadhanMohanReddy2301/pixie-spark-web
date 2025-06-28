@@ -51,6 +51,17 @@
   }
 }
 
+@keyframes gradient-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+    opacity: 0.95;
+  }
+}
+
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -62,6 +73,10 @@
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-gradient-float {
+  animation: gradient-float 4s ease-in-out infinite;
 }
 
 .animate-spin-slow {
