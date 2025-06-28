@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
@@ -13,21 +12,21 @@ const About = () => {
       role: 'Founder & CEO',
       description: 'Leading AI innovations with deep expertise in machine learning and neural networks.',
       skills: ['Machine Learning', 'Neural Networks', 'AI Strategy'],
-      icon: <Users className="w-12 h-12 text-blue-400 animate-pulse" />
+      icon: <Users className="w-8 h-8 text-blue-400 animate-pulse" />
     },
     {
       name: 'Pavan Reddy',
       role: 'CTO & Co-Founder',
       description: 'Driving technical excellence and scalable AI solutions for enterprise clients.',
       skills: ['System Architecture', 'Enterprise AI', 'Technical Leadership'],
-      icon: <Rocket className="w-12 h-12 text-green-400 animate-pulse" />
+      icon: <Rocket className="w-8 h-8 text-green-400 animate-pulse" />
     },
     {
       name: 'Anitha Karre',
       role: 'Co-Founder & Head of Research',
       description: 'Technical researcher specializing in LLMs, Generative AI, business analysis, and AI research methodologies.',
       skills: ['LLMs', 'Generative AI', 'Business Analysis', 'AI Research'],
-      icon: <Brain className="w-12 h-12 text-purple-400 animate-pulse" />
+      icon: <Brain className="w-8 h-8 text-purple-400 animate-pulse" />
     }
   ];
 
@@ -112,7 +111,7 @@ const About = () => {
 
       {/* Team Section */}
       <section className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-6 text-white">
               Meet Our <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">Team</span>
@@ -122,26 +121,26 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {teamMembers.map((member, index) => (
               <Card 
                 key={index} 
                 className="bg-white/10 backdrop-blur-sm border border-white/20 hover:border-orange-400/50 transition-all duration-500 hover:transform hover:scale-105"
               >
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 flex justify-center">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-orange-400/20 to-red-400/20 flex items-center justify-center border-2 border-orange-400/30">
+                <CardContent className="p-4 text-center">
+                  <div className="mb-3 flex justify-center">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-orange-400/20 to-red-400/20 flex items-center justify-center border-2 border-orange-400/30">
                       {member.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-orange-300 font-semibold mb-3 text-sm">{member.role}</p>
-                  <p className="text-gray-300 leading-relaxed mb-4 text-sm">{member.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+                  <p className="text-orange-300 font-semibold mb-2 text-xs">{member.role}</p>
+                  <p className="text-gray-300 leading-relaxed mb-3 text-xs">{member.description}</p>
                   <div className="flex flex-wrap gap-1 justify-center">
                     {member.skills.map((skill, skillIndex) => (
                       <span 
                         key={skillIndex}
-                        className="px-2 py-1 bg-orange-400/20 text-orange-300 rounded-full text-xs font-medium"
+                        className="px-1.5 py-0.5 bg-orange-400/20 text-orange-300 rounded-full text-xs font-medium"
                       >
                         {skill}
                       </span>
