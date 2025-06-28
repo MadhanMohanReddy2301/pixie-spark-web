@@ -30,7 +30,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
   }, []);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-80 h-[500px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)]">
+    <div className="fixed bottom-6 right-6 z-50 w-96 h-[500px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)] sm:w-80 sm:h-[450px] md:w-96 md:h-[500px]">
       <Card className="h-full flex flex-col shadow-2xl border-0 bg-white">
         <CardHeader className="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-t-lg p-3 flex-shrink-0">
           <div className="flex items-center justify-between">
@@ -63,7 +63,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
                 
                 {isLoading && (
                   <div className="flex items-start space-x-2">
-                    <Avatar className="w-8 h-8">
+                    <Avatar className="w-6 h-6">
                       <AvatarImage 
                         src="/lovable-uploads/d083078f-9e90-4dd9-98a3-a43e84f87daf.png" 
                         alt="PixieAI"

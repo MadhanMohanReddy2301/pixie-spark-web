@@ -13,7 +13,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
     <div
       className={`flex items-start space-x-2 ${message.role === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}
     >
-      <Avatar className="w-8 h-8 flex-shrink-0">
+      <Avatar className="w-6 h-6 flex-shrink-0">
         {message.role === 'assistant' ? (
           <AvatarImage 
             src="/lovable-uploads/d083078f-9e90-4dd9-98a3-a43e84f87daf.png" 
@@ -21,7 +21,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
           />
         ) : (
           <AvatarFallback className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-            <User className="w-4 h-4" />
+            <User className="w-3 h-3" />
           </AvatarFallback>
         )}
       </Avatar>

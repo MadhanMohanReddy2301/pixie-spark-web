@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
@@ -119,7 +120,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
-                Why Choose <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">PixieAI</span>?
+                Why Choose <span className="text-white">Pixie</span><span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">AI</span>?
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed">
                 We're an AI-first innovation company that bridges the gap between cutting-edge AI 
@@ -259,7 +260,7 @@ const Index = () => {
                   alt="PixieAI Logo" 
                   className="w-10 h-10 object-contain"
                 />
-                <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">PixieAI</span>
+                <span className="text-2xl font-bold text-white">Pixie<span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">AI</span></span>
               </div>
               <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
                 AI-first innovation company dedicated to solving real-world business challenges 

@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { MessageCircle } from 'lucide-react';
 
 interface ChatToggleButtonProps {
   onClick: () => void;
@@ -18,11 +17,10 @@ const ChatToggleButton: React.FC<ChatToggleButtonProps> = ({ onClick }) => {
           <img 
             src="/lovable-uploads/d083078f-9e90-4dd9-98a3-a43e84f87daf.png" 
             alt="PixieAI Logo" 
-            className="w-6 h-6 object-contain"
+            className="w-6 h-6 object-contain animate-float"
           />
-          <MessageCircle className="w-5 h-5 text-white" />
-          <span className="text-sm font-medium text-white hidden sm:block">
-            Chat with PixieAI Assistant
+          <span className="text-sm font-medium text-white hidden sm:block animate-pulse">
+            PixieAI Assistant
           </span>
         </div>
       </Button>
