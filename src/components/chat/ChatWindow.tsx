@@ -4,10 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Avatar, AvatarImage } from '@/components/ui/avatar';
-import { X, Send, Loader2 } from 'lucide-react';
+import { X, Send } from 'lucide-react';
 import { useChat } from '@/hooks/useChat';
 import ChatMessage from './ChatMessage';
+import TypingIndicator from './TypingIndicator';
 
 interface ChatWindowProps {
   onClose: () => void;
@@ -61,19 +61,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
                   <ChatMessage key={index} message={message} />
                 ))}
                 
-                {isLoading && (
-                  <div className="flex items-start space-x-2">
-                    <Avatar className="w-6 h-6">
-                      <AvatarImage 
-                        src="/lovable-uploads/d083078f-9e90-4dd9-98a3-a43e84f87daf.png" 
-                        alt="PixieAI"
-                      />
-                    </Avatar>
-                    <div className="bg-gray-100 p-3 rounded-lg">
-                      <Loader2 className="w-4 h-4 animate-spin text-gray-600" />
-                    </div>
-                  </div>
-                )}
+                {isLoading && <TypingIndicator />}
                 
                 <div ref={messagesEndRef} />
               </div>
