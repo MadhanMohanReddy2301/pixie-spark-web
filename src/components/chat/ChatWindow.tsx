@@ -30,7 +30,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
   }, []);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-96 h-[500px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)] sm:w-80 sm:h-[450px] md:w-96 md:h-[500px]">
+    <div className="fixed bottom-4 right-4 z-50 w-[calc(100vw-2rem)] h-[calc(100vh-2rem)] max-w-96 max-h-[500px] sm:bottom-6 sm:right-6 sm:w-80 sm:h-[450px] md:w-96 md:h-[500px]">
       <Card className="h-full flex flex-col shadow-2xl border-0 bg-white">
         <CardHeader className="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-t-lg p-3 flex-shrink-0">
           <div className="flex items-center justify-between">
@@ -68,20 +68,21 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
             </ScrollArea>
           </div>
 
-          <div className="border-t p-3 flex-shrink-0 bg-white">
+          <div className="border-t p-2 sm:p-3 flex-shrink-0 bg-white">
             <div className="flex space-x-2">
-              <Input
+              <input
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
                 placeholder="Type your message..."
                 disabled={isLoading}
-                className="flex-1 text-sm"
+                className="flex-1 text-base sm:text-sm px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                style={{ fontSize: '16px' }}
               />
               <Button
                 onClick={sendMessage}
                 disabled={!inputMessage.trim() || isLoading}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 flex-shrink-0 px-3"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 flex-shrink-0 px-3 py-2"
               >
                 <Send className="w-4 h-4" />
               </Button>
